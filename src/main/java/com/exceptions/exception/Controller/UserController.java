@@ -62,4 +62,15 @@ public class UserController {
 
         }
     }
+
+    @GetMapping("/logincheck/{username}/{password}")
+    public boolean logincheck(@PathVariable String username , @PathVariable String password){
+        CustomUser two=repo.findAll().stream().filter(c->c.getUsername().equalsIgnoreCase(username)).findFirst().get();
+
+        if(two.getUsername().equalsIgnoreCase(username) && two.getPassword().equalsIgnoreCase(password)){
+            return true;
+        }else{
+            return false;
+    }
+}
 }
