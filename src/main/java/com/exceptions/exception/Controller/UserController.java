@@ -4,6 +4,8 @@ package com.exceptions.exception.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.exceptions.exception.Repository.userRepo;
 import com.exceptions.exception.models.CustomUser;
 
+@CrossOrigin("http://localhost:4200")
 @RestController
 public class UserController {
 
@@ -73,4 +76,15 @@ public class UserController {
             return false;
     }
 }
+@Bean
+public void entrydata(){
+repo.save(new CustomUser(1, "one", "oneone", "hello"));
+repo.save(new CustomUser(2, "two", "twotwo", "hello1"));
+repo.save(new CustomUser(3, "three", "three", "hello2"));
+repo.save(new CustomUser(4, "four", "four", "hello4"));
+
+
 }
+
+}
+
