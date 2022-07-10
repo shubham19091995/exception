@@ -22,4 +22,10 @@ class CustomUser{
     private String username;
     private String password;
     private String rolename;
+    private String EMAIL;
+    private String PHONE_NUMBER;
+    private String HIRE_DATE;
+    private int SALARY;
+    private int MANAGER_ID;
+    private int DEPARTMENT_ID;
 }

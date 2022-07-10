@@ -78,10 +78,6 @@ public class UserController {
 }
 @Bean
 public void entrydata(){
-repo.save(new CustomUser(1, "one", "oneone", "hello"));
-repo.save(new CustomUser(2, "two", "twotwo", "hello1"));
-repo.save(new CustomUser(3, "three", "three", "hello2"));
-repo.save(new CustomUser(4, "four", "four", "hello4"));
 
 
 }
